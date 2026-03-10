@@ -76,7 +76,6 @@ const Index = () => {
       <div className="flex flex-1 overflow-hidden">
         <LeftSidebar />
         <main className="flex-1 overflow-y-auto p-5">
-          <CandidateRecordHeader />
           <CandidateTable
             briefExpanded={briefExpanded}
             onToggleBrief={() => setBriefExpanded(!briefExpanded)}
