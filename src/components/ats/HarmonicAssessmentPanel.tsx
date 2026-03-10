@@ -100,12 +100,6 @@ const HarmonicAssessmentPanel = () => {
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>
-            <div className="bg-white/10 border border-white/20 rounded-lg px-5 py-4 text-center">
-              <VerdictBadge label="Weak Fit" level="weak" large />
-              <p className="text-white/40 text-[11px] mt-1.5 uppercase tracking-wider">
-                Overall Verdict
-              </p>
-            </div>
           </div>
         </div>
 
