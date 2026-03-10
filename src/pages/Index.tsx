@@ -3,7 +3,7 @@ import TopNav from "@/components/ats/TopNav";
 import LeftSidebar from "@/components/ats/LeftSidebar";
 import HarmonicAssessmentPanel from "@/components/ats/HarmonicAssessmentPanel";
 import WorkflowActions from "@/components/ats/WorkflowActions";
-import CandidateTable from "@/components/harmonic/CandidateTable";
+
 import SkillCard from "@/components/harmonic/SkillCard";
 import RiskFlagsCard from "@/components/harmonic/RiskFlagsCard";
 import ExecutiveSummaryCard from "@/components/harmonic/ExecutiveSummaryCard";
