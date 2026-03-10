@@ -104,17 +104,17 @@ const HarmonicAssessmentPanel = () => {
         </div>
 
         {/* ATS meta strip */}
-        <div className="mt-5 pt-3 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/40">
+        <div className="mt-5 pt-3 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/70">
           <span>
-            <span className="font-medium text-white/60">Status:</span> Internal Review
+            <span className="font-medium text-white/90">Status:</span> Internal Review
           </span>
           <span>
-            <span className="font-medium text-white/60">Client:</span> Confidential
+            <span className="font-medium text-white/90">Client:</span> Confidential
           </span>
           <span>
-            <span className="font-medium text-white/60">Seniority:</span> Senior (SFIA 5)
+            <span className="font-medium text-white/90">Seniority:</span> Senior (SFIA 5)
           </span>
-          <span className="text-white/30">
+          <span className="text-white/60">
             Attached to Bullhorn candidate record
           </span>
         </div>
