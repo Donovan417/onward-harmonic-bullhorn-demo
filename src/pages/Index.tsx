@@ -1,7 +1,6 @@
 import { useState } from "react";
 import TopNav from "@/components/ats/TopNav";
 import LeftSidebar from "@/components/ats/LeftSidebar";
-import CandidateRecordHeader from "@/components/ats/CandidateRecordHeader";
 import HarmonicAssessmentPanel from "@/components/ats/HarmonicAssessmentPanel";
 import WorkflowActions from "@/components/ats/WorkflowActions";
 import CandidateTable from "@/components/harmonic/CandidateTable";
