@@ -9,7 +9,7 @@ const questions = [
 
 const InterviewQuestionsCard = () => {
   return (
-    <div className="rounded-lg border border-border bg-card shadow-card p-6 md:p-8 mb-6">
+    <div className="rounded-lg border border-border bg-card shadow-card p-5 md:p-6 mb-4">
       <div className="flex items-center gap-2 mb-5">
         <MessageSquare className="w-5 h-5 text-muted-foreground" />
         <h3 className="text-lg font-bold text-foreground">Suggested Interview Questions</h3>
