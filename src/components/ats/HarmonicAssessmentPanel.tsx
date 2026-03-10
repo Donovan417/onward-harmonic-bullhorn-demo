@@ -84,7 +84,7 @@ const HarmonicAssessmentPanel = () => {
 
           {/* Right: verdict + actions */}
           <div className="flex flex-col items-end gap-3">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center justify-end gap-2">
               <ActionButton icon={Send} label="Submit" />
               <ActionButton icon={ArrowRight} label="Move Stage" />
               <ActionButton icon={StickyNote} label="Add Note" />
