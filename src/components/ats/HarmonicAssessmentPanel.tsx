@@ -54,7 +54,7 @@ const HarmonicAssessmentPanel = () => {
                 Machine Learning Engineer · @jigyasa-grover
               </p>
               {/* ATS metadata */}
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-xs text-white/40">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-xs text-white/70">
                 <span>
                   <span className="font-medium text-white/60">Stage:</span> Technical Review
                 </span>
