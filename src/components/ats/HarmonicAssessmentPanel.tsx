@@ -50,7 +50,7 @@ const HarmonicAssessmentPanel = () => {
                 <h1 className="text-xl font-bold text-white">Jigyasa Grover</h1>
                 <VerdictBadge label="Weak Fit" level="weak" />
               </div>
-              <p className="text-white/50 text-sm mt-0.5">
+              <p className="text-white/80 text-sm mt-0.5">
                 Machine Learning Engineer · @jigyasa-grover
               </p>
               {/* ATS metadata */}
