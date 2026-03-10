@@ -73,7 +73,7 @@ const HarmonicAssessmentPanel = () => {
                 {skills.map((s) => (
                   <span
                     key={s}
-                    className="px-2 py-0.5 text-[11px] font-medium rounded bg-white/10 text-white/80 border border-white/15"
+                    className="px-2 py-0.5 text-[11px] font-medium rounded bg-white/10 text-white border border-white/15"
                   >
                     {s}
                   </span>
