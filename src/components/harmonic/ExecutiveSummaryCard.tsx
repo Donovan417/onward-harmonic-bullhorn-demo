@@ -11,9 +11,10 @@ const ExecutiveSummaryCard = () => {
       <div className="rounded-lg bg-muted/60 border border-border p-4 flex gap-3">
         <Info className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-0.5" />
         <p className="text-sm text-muted-foreground leading-relaxed">
-14:           <span className="font-semibold text-foreground/70">Note:</span>{" "}
-15:           .ipynb notebook files do not highlight exact code lines.
-16:         </p>
+          <span className="font-semibold text-foreground/70">Note:</span>{" "}
+          .ipynb notebook files can show hands-on experimentation, but they are less reliable than
+          standard source files for proving exact authorship and production-grade engineering depth.
+        </p>
       </div>
     </div>
   );
