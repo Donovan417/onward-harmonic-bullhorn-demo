@@ -2,7 +2,7 @@ import { Info } from "lucide-react";
 
 const ExecutiveSummaryCard = () => {
   return (
-    <div className="rounded-lg border border-border bg-card shadow-card p-6 md:p-8 mb-6">
+    <div className="rounded-lg border border-border bg-card shadow-card p-5 md:p-6 mb-4">
       <h3 className="text-lg font-bold text-foreground mb-4">Executive Summary</h3>
       <p className="font-serif text-[15px] leading-relaxed text-foreground/85 mb-5">
         Moderate evidence in Python engineering and Docker/containerization, but major gaps remain
