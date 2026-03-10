@@ -76,20 +76,15 @@ const Index = () => {
       <div className="flex flex-1 overflow-hidden">
         <LeftSidebar />
         <main className="flex-1 overflow-y-auto p-5">
-          <CandidateTable
-            briefExpanded={briefExpanded}
-            onToggleBrief={() => setBriefExpanded(!briefExpanded)}
-          />
-
           {briefExpanded && (
             <>
               <HarmonicAssessmentPanel />
+              <ExecutiveSummaryCard />
               <WorkflowActions />
               {skillCards.map((card) => (
                 <SkillCard key={card.title} {...card} />
               ))}
               <RiskFlagsCard />
-              <ExecutiveSummaryCard />
               <InterviewQuestionsCard />
             </>
           )}
