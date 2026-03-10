@@ -56,16 +56,16 @@ const HarmonicAssessmentPanel = () => {
               {/* ATS metadata */}
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-xs text-white/70">
                 <span>
-                  <span className="font-medium text-white/60">Stage:</span> Technical Review
+                  <span className="font-medium text-white/90">Stage:</span> Technical Review
                 </span>
                 <span>
-                  <span className="font-medium text-white/60">Req:</span> Machine Learning Engineer
+                  <span className="font-medium text-white/90">Req:</span> Machine Learning Engineer
                 </span>
                 <span>
-                  <span className="font-medium text-white/60">Owner:</span> Sarah Chen
+                  <span className="font-medium text-white/90">Owner:</span> Sarah Chen
                 </span>
                 <span>
-                  <span className="font-medium text-white/60">Source:</span> Bullhorn Candidate Record
+                  <span className="font-medium text-white/90">Source:</span> Bullhorn Candidate Record
                 </span>
               </div>
               {/* Skill tags */}
