@@ -3,7 +3,7 @@ import TopNav from "@/components/ats/TopNav";
 import LeftSidebar from "@/components/ats/LeftSidebar";
 import HarmonicAssessmentPanel from "@/components/ats/HarmonicAssessmentPanel";
 import WorkflowActions from "@/components/ats/WorkflowActions";
-import CandidateTable from "@/components/harmonic/CandidateTable";
+
 import SkillCard from "@/components/harmonic/SkillCard";
 import RiskFlagsCard from "@/components/harmonic/RiskFlagsCard";
 import ExecutiveSummaryCard from "@/components/harmonic/ExecutiveSummaryCard";
@@ -76,20 +76,15 @@ const Index = () => {
       <div className="flex flex-1 overflow-hidden">
         <LeftSidebar />
         <main className="flex-1 overflow-y-auto p-5">
-          <CandidateTable
-            briefExpanded={briefExpanded}
-            onToggleBrief={() => setBriefExpanded(!briefExpanded)}
-          />
-
           {briefExpanded && (
             <>
               <HarmonicAssessmentPanel />
+              <ExecutiveSummaryCard />
               <WorkflowActions />
               {skillCards.map((card) => (
                 <SkillCard key={card.title} {...card} />
               ))}
               <RiskFlagsCard />
-              <ExecutiveSummaryCard />
               <InterviewQuestionsCard />
             </>
           )}
