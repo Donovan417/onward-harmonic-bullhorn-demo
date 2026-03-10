@@ -17,7 +17,7 @@ interface SkillCardProps {
 
 const SkillCard = ({ title, level, levelLabel, summary, evidenceNote, links }: SkillCardProps) => {
   return (
-    <div className="rounded-lg border border-border bg-card shadow-card p-6 md:p-8 mb-6">
+    <div className="rounded-lg border border-border bg-card shadow-card p-5 md:p-6 mb-4">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-bold text-foreground">{title}</h3>
         <VerdictBadge label={levelLabel} level={level} />

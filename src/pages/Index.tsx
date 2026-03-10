@@ -1,7 +1,10 @@
 import { useState } from "react";
-import Header from "@/components/harmonic/Header";
+import TopNav from "@/components/ats/TopNav";
+import LeftSidebar from "@/components/ats/LeftSidebar";
+import CandidateRecordHeader from "@/components/ats/CandidateRecordHeader";
+import HarmonicAssessmentPanel from "@/components/ats/HarmonicAssessmentPanel";
+import WorkflowActions from "@/components/ats/WorkflowActions";
 import CandidateTable from "@/components/harmonic/CandidateTable";
-import CandidateHero from "@/components/harmonic/CandidateHero";
 import SkillCard from "@/components/harmonic/SkillCard";
 import RiskFlagsCard from "@/components/harmonic/RiskFlagsCard";
 import ExecutiveSummaryCard from "@/components/harmonic/ExecutiveSummaryCard";
@@ -66,31 +69,35 @@ const skillCards = [
 ];
 
 const Index = () => {
-  const [activeSort, setActiveSort] = useState("Verdict");
   const [briefExpanded, setBriefExpanded] = useState(true);
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-brief mx-auto px-4 sm:px-6 py-10">
-        <Header activeSort={activeSort} onSortChange={setActiveSort} />
-        <CandidateTable
-          briefExpanded={briefExpanded}
-          onToggleBrief={() => setBriefExpanded(!briefExpanded)}
-        />
+    <div className="min-h-screen flex flex-col bg-background">
+      <TopNav />
+      <div className="flex flex-1 overflow-hidden">
+        <LeftSidebar />
+        <main className="flex-1 overflow-y-auto p-5">
+          <CandidateRecordHeader />
+          <CandidateTable
+            briefExpanded={briefExpanded}
+            onToggleBrief={() => setBriefExpanded(!briefExpanded)}
+          />
 
-        {briefExpanded && (
-          <>
-            <CandidateHero />
-            {skillCards.map((card) => (
-              <SkillCard key={card.title} {...card} />
-            ))}
-            <RiskFlagsCard />
-            <ExecutiveSummaryCard />
-            <InterviewQuestionsCard />
-          </>
-        )}
+          {briefExpanded && (
+            <>
+              <HarmonicAssessmentPanel />
+              <WorkflowActions />
+              {skillCards.map((card) => (
+                <SkillCard key={card.title} {...card} />
+              ))}
+              <RiskFlagsCard />
+              <ExecutiveSummaryCard />
+              <InterviewQuestionsCard />
+            </>
+          )}
 
-        <Footer />
+          <Footer />
+        </main>
       </div>
     </div>
   );
