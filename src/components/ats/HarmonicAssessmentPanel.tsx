@@ -50,22 +50,22 @@ const HarmonicAssessmentPanel = () => {
                 <h1 className="text-xl font-bold text-white">Jigyasa Grover</h1>
                 <VerdictBadge label="Weak Fit" level="weak" />
               </div>
-              <p className="text-white/50 text-sm mt-0.5">
+              <p className="text-white/80 text-sm mt-0.5">
                 Machine Learning Engineer · @jigyasa-grover
               </p>
               {/* ATS metadata */}
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-xs text-white/40">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-2 text-xs text-white/70">
                 <span>
-                  <span className="font-medium text-white/60">Stage:</span> Technical Review
+                  <span className="font-medium text-white/90">Stage:</span> Technical Review
                 </span>
                 <span>
-                  <span className="font-medium text-white/60">Req:</span> Machine Learning Engineer
+                  <span className="font-medium text-white/90">Req:</span> Machine Learning Engineer
                 </span>
                 <span>
-                  <span className="font-medium text-white/60">Owner:</span> Sarah Chen
+                  <span className="font-medium text-white/90">Owner:</span> Sarah Chen
                 </span>
                 <span>
-                  <span className="font-medium text-white/60">Source:</span> Bullhorn Candidate Record
+                  <span className="font-medium text-white/90">Source:</span> Bullhorn Candidate Record
                 </span>
               </div>
               {/* Skill tags */}
@@ -73,7 +73,7 @@ const HarmonicAssessmentPanel = () => {
                 {skills.map((s) => (
                   <span
                     key={s}
-                    className="px-2 py-0.5 text-[11px] font-medium rounded bg-white/10 text-white/80 border border-white/15"
+                    className="px-2 py-0.5 text-[11px] font-medium rounded bg-white/10 text-white border border-white/15"
                   >
                     {s}
                   </span>
@@ -104,17 +104,17 @@ const HarmonicAssessmentPanel = () => {
         </div>
 
         {/* ATS meta strip */}
-        <div className="mt-5 pt-3 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/40">
+        <div className="mt-5 pt-3 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/70">
           <span>
-            <span className="font-medium text-white/60">Status:</span> Internal Review
+            <span className="font-medium text-white/90">Status:</span> Internal Review
           </span>
           <span>
-            <span className="font-medium text-white/60">Client:</span> Confidential
+            <span className="font-medium text-white/90">Client:</span> Confidential
           </span>
           <span>
-            <span className="font-medium text-white/60">Seniority:</span> Senior (SFIA 5)
+            <span className="font-medium text-white/90">Seniority:</span> Senior (SFIA 5)
           </span>
-          <span className="text-white/30">
+          <span className="text-white/60">
             Attached to Bullhorn candidate record
           </span>
         </div>
