@@ -69,13 +69,27 @@ const skillCards = [
 
 const Index = () => {
   const [briefExpanded, setBriefExpanded] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <TopNav />
+      <TopNav onMenuToggle={() => setSidebarOpen(!sidebarOpen)} />
       <div className="flex flex-1 overflow-hidden">
-        <LeftSidebar />
-        <main className="flex-1 overflow-y-auto p-5">
+        {/* Sidebar: hidden on mobile, overlay when toggled */}
+        {sidebarOpen && (
+          <div
+            className="fixed inset-0 z-40 bg-black/50 md:hidden"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+        <div
+          className={`fixed inset-y-0 left-0 z-50 transform transition-transform duration-200 md:relative md:translate-x-0 ${
+            sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          } md:block`}
+        >
+          <LeftSidebar onClose={() => setSidebarOpen(false)} />
+        </div>
+        <main className="flex-1 overflow-y-auto p-3 md:p-5 max-w-full">
           {briefExpanded && (
             <>
               <HarmonicAssessmentPanel />

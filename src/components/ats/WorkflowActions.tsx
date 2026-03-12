@@ -10,15 +10,15 @@ const actions = [
 
 const WorkflowActions = () => {
   return (
-    <div className="rounded-lg border border-border bg-card shadow-card p-4 mb-5">
+    <div className="rounded-lg border border-border bg-card shadow-card p-3 md:p-4 mb-4 md:mb-5">
       <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-3">
         Workflow Actions
       </p>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2">
         {actions.map((a) => (
           <button
             key={a.label}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-border text-xs font-medium text-foreground hover:bg-muted transition-colors"
+            className="inline-flex items-center justify-center gap-1.5 px-3 py-2.5 md:py-1.5 rounded-md border border-border text-xs font-medium text-foreground hover:bg-muted transition-colors min-h-[44px] md:min-h-0 w-full sm:w-auto"
           >
             <a.icon className="w-3.5 h-3.5 text-muted-foreground" />
             {a.label}
