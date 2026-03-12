@@ -29,18 +29,18 @@ const risks: Risk[] = [
 
 const RiskFlagsCard = () => {
   return (
-    <div className="rounded-lg border border-border bg-card shadow-card p-5 md:p-6 mb-4">
-      <div className="flex items-center gap-2 mb-6">
+    <div className="rounded-lg border border-border bg-card shadow-card p-4 md:p-6 mb-3 md:mb-4">
+      <div className="flex items-center gap-2 mb-4 md:mb-6">
         <AlertTriangle className="w-5 h-5 text-risk-high" />
-        <h3 className="text-lg font-bold text-foreground">Key Risk Flags</h3>
+        <h3 className="text-base md:text-lg font-bold text-foreground">Key Risk Flags</h3>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-3 md:space-y-4">
         {risks.map((risk) => {
           const isHigh = risk.severity === "High";
           return (
             <div
               key={risk.title}
-              className={`rounded-lg border p-4 ${
+              className={`rounded-lg border p-3 md:p-4 ${
                 isHigh
                   ? "border-verdict-weak-border bg-verdict-weak-bg/30"
                   : "border-verdict-moderate-border bg-verdict-moderate-bg/30"
@@ -52,7 +52,7 @@ const RiskFlagsCard = () => {
                   : "hsl(var(--risk-medium-accent))",
               }}
             >
-              <div className="flex items-center gap-2 mb-1">
+              <div className="flex flex-wrap items-center gap-1.5 md:gap-2 mb-1">
                 <span
                   className={`text-xs font-bold uppercase tracking-wider ${
                     isHigh ? "text-verdict-weak-fg" : "text-verdict-moderate-fg"
