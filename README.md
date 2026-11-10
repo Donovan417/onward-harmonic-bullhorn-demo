@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+# Harmonic × Bullhorn — recruiter assessment interface
 
-## Project info
+A responsive React demonstration of how a technical-evidence brief could appear inside a recruiter’s applicant-tracking workflow. It places a candidate summary, skill evidence, risk flags and suggested interview questions alongside familiar ATS navigation and actions.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The repository belongs to [Donovan Smith](https://github.com/Donovan417). The interface uses a Bullhorn-style setting to demonstrate the Harmonic assessment concept; it does not connect to a live Bullhorn account or submit candidates.
 
-## How can I edit this code?
+## What the demo shows
 
-There are several ways of editing your application.
+- A candidate assessment header with verdict, confidence, requirements coverage and repository-count metadata.
+- An executive summary and skill cards with supporting GitHub links.
+- Risk flags and interview-question cards to support a human review.
+- Recruiter workflow actions arranged in the surrounding ATS interface.
+- A responsive sidebar that switches to an overlay on smaller screens.
 
-**Use Lovable**
+## Scope of the demonstration
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+The assessment content is defined in the source files. The displayed candidate, scores, counts and conclusions are demonstration content; this frontend does not calculate a fresh assessment when it loads.
 
-Changes made via Lovable will be committed automatically to this repo.
+Buttons for submission, moving stages, adding notes, sharing, exporting and attaching an assessment are interface demonstrations, not connected ATS operations. The live GitHub links can be opened separately. Use the demo to evaluate information hierarchy, responsive layout and evidence presentation.
 
-**Use your preferred IDE**
+## Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+React 18 · TypeScript · Vite · Tailwind CSS · shadcn/ui / Radix UI · React Router · Lucide icons
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The project originated from a Lovable scaffold. Its build and local preview run directly from this repository; a Lovable subscription is not required.
 
-Follow these steps:
+## Run locally
+
+You need Node.js and npm. No API key or external database is required for the current static assessment screen.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+git clone https://github.com/Donovan417/onward-harmonic-bullhorn-demo.git
+cd onward-harmonic-bullhorn-demo
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:8080](http://localhost:8080), the development port configured in [vite.config.ts](vite.config.ts).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+npm run preview
+```
 
-**Use GitHub Codespaces**
+Use the preview address printed by Vite to inspect the production bundle.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Code map
 
-## What technologies are used for this project?
+| Area | Source |
+| --- | --- |
+| Page composition and skill evidence | [src/pages/Index.tsx](src/pages/Index.tsx) |
+| Candidate assessment header | [src/components/ats/HarmonicAssessmentPanel.tsx](src/components/ats/HarmonicAssessmentPanel.tsx) |
+| ATS navigation | [src/components/ats/LeftSidebar.tsx](src/components/ats/LeftSidebar.tsx), [TopNav.tsx](src/components/ats/TopNav.tsx) |
+| Workflow action layout | [src/components/ats/WorkflowActions.tsx](src/components/ats/WorkflowActions.tsx) |
+| Summary, skill, risk and interview cards | [src/components/harmonic](src/components/harmonic) |
+| Theme and responsive styles | [src/index.css](src/index.css), [tailwind.config.ts](tailwind.config.ts) |
 
-This project is built with:
+## Development checks
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+`package.json` includes `npm run lint` and `npm test`, with Vitest and browser-test tooling configured in the repository. Review the tests and browser configuration for the checks currently implemented.
 
-## How can I deploy this project?
+## Portfolio context
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is useful for reviewing a developer/designer’s approach to dense information, reusable React components, mobile navigation and the relationship between conclusions and evidence. Live ATS integration, fresh assessment generation and production behavior would require additional implementation.
